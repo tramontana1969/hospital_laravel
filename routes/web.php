@@ -19,3 +19,4 @@ Route::get('/', function () {
 Route::get('/patients', [\App\Http\Controllers\Models\PatientController::class, 'showAll']);
 Route::post('/patients', [\App\Http\Controllers\Models\PatientController::class, 'add']);
 Route::get('patients/id={id}', [\App\Http\Controllers\Models\PatientController::class, 'showPatient']);
+Route::get('medicine', [\App\Http\Controllers\Models\MedicineController::class, 'showAll']);

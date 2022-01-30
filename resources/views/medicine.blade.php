@@ -33,5 +33,14 @@
             </tr>
         @endfor
     </table>
+    <h3>Add Medicine</h3>
+    <form method="post">
+        @csrf
+        <input type="hidden" name="id"/>
+        <p>name: <input type="text" name="name"/></p>
+        <p>description: <input type="text" name="description"/></p>
+        <p>side_effect: <input type="text" name="side_effect"/></p>
+        <input type="submit" value="Add medicine"/>
+    </form>
     </body>
 </html>

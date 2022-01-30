@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Medicine</title>
+        <title>med</title>
     </head>
     <body>
     <style>
@@ -17,6 +17,12 @@
             background: #b0e0e6;
         }
     </style>
+    <br>
+    <a href="/medicine">
+        <button>Back</button>
+    </a>
+    <br>
+    <br>
     <table>
         <tr>
             <th>id</th>
@@ -24,14 +30,12 @@
             <th>description</th>
             <th>side_effect</th>
         </tr>
-        @for($i = 0; $i < count($meds); $i++)
-            <tr>
-                <td><a href="medicine/id={{ $meds[$i]['id'] }}">{{ $meds[$i]['id'] }}</a></td>
-                <td>{{ $meds[$i]['name'] }}</td>
-                <td>{{ $meds[$i]['description'] }}</td>
-                <td>{{ $meds[$i]['side_effect'] }}</td>
-            </tr>
-        @endfor
+        <tr>
+            <td>{{ $med['id'] }}</td>
+            <td>{{ $med['name'] }}</td>
+            <td>{{ $med['description'] }}</td>
+            <td>{{ $med['side_effect'] }}</td>
+        </tr>
     </table>
     </body>
 </html>

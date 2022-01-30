@@ -31,4 +31,23 @@ class PatientController extends Controller
         }
         return redirect('patients');
     }
+    public function edit(Request $request, $id) {
+        if ($request->isMethod('post')) {
+            $data = $request->validate(
+              [
+                  'name' => 'required|max:48',
+                  'sex' => 'required|max:1',
+                  'date_of_birth' => 'required',
+                  'home_address' => 'required',
+              ]
+            );
+            $patient = Patient::find($id);
+            $patient->name = $data['name'];
+            $patient->sex = $data['sex'];
+            $patient->date_of_birth = $data['date_of_birth'];
+            $patient->home_address = $data['home_address'];
+            $patient->save();
+        }
+        return redirect()->refresh();
+    }
 }

@@ -24,3 +24,4 @@ Route::post('/patients/id={id}', [\App\Http\Controllers\Models\PatientController
 Route::get('/medicine', [\App\Http\Controllers\Models\MedicineController::class, 'showAll']);
 Route::post('/medicine', [\App\Http\Controllers\Models\MedicineController::class, 'add']);
 Route::get('/medicine/id={id}', [\App\Http\Controllers\Models\MedicineController::class, 'showMed']);
+Route::post('/medicine/id={id}', [\App\Http\Controllers\Models\MedicineController::class, 'edit']);

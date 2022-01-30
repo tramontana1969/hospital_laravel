@@ -37,5 +37,14 @@
             <td>{{ $med['side_effect'] }}</td>
         </tr>
     </table>
+    <h3>Edit med</h3>
+    <form method="post">
+        @csrf
+        <input type="hidden" name="id" value="{{ $med['id'] }}"/>
+        <p>name: <input type="text" name="name" value="{{ $med['name'] }}"/></p>
+        <p>description: <input type="text" name="description" value="{{ $med['description'] }}"/></p>
+        <p>side_effect: <input type="text" name="side_effect" value="{{ $med['side_effect'] }}"/></p>
+        <input type="submit" value="Edit med"/>
+    </form>
     </body>
 </html>

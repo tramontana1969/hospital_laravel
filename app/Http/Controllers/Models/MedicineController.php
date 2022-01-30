@@ -28,4 +28,21 @@ class MedicineController extends Controller
         }
         return redirect('medicine');
     }
+    public function edit(Request $request, $id) {
+        if ($request->isMethod('post')) {
+            $data = $request->validate(
+                [
+                    'name' => 'required|max:48',
+                    'description' => 'required',
+                    'side_effect' => 'required',
+                ]
+            );
+            $med = Medicine::find($id);
+            $med->name = $data['name'];
+            $med->description = $data['description'];
+            $med->side_effect = $data['side_effect'];
+            $med->save();
+        }
+        return redirect()->refresh();
+    }
 }

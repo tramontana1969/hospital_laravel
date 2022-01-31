@@ -67,4 +67,8 @@ class PrescribedMedicationsController extends Controller
         }
         return redirect()->refresh();
     }
+    public function delete($id) {
+        Prescribed_medications::find($id)->delete();
+        return redirect('/prescribed');
+    }
 }

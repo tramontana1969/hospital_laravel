@@ -45,4 +45,8 @@ class MedicineController extends Controller
         }
         return redirect()->refresh();
     }
+    public function delete($id) {
+        Medicine::find($id)->delete();
+        return redirect('medicine');
+    }
 }

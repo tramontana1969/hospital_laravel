@@ -27,6 +27,7 @@
             <th>symptoms</th>
             <th>medical_prescription</th>
             <th>doctors_name</th>
+            <th>delete</th>
         </tr>
         @for($i = 0; $i < count($examine); $i++)
             <tr>
@@ -38,6 +39,11 @@
                 <td>{{ $examine[$i]['symptoms'] }}</td>
                 <td>{{ $examine[$i]['medical_prescription'] }}</td>
                 <td>{{ $examine[$i]['doctors_name'] }}</td>
+                <td>
+                    <a href="/examine/delete/id={{ $examine[$i]['id'] }}">
+                        <button>Delete</button>
+                    </a>
+                </td>
             </tr>
         @endfor
     </table>

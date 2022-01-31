@@ -69,4 +69,8 @@ class ExamineController extends Controller
         }
         return redirect()->refresh();
     }
+    public function delete($id) {
+        Examine::find($id)->delete();
+        return redirect('examine');
+    }
 }

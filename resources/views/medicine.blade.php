@@ -23,6 +23,7 @@
             <th>name</th>
             <th>description</th>
             <th>side_effect</th>
+            <th>delete</th>
         </tr>
         @for($i = 0; $i < count($meds); $i++)
             <tr>
@@ -30,6 +31,11 @@
                 <td>{{ $meds[$i]['name'] }}</td>
                 <td>{{ $meds[$i]['description'] }}</td>
                 <td>{{ $meds[$i]['side_effect'] }}</td>
+                <td>
+                    <a href="/medicine/delete/id={{ $meds[$i]['id'] }}">
+                        <button>Delete</button>
+                    </a>
+                </td>
             </tr>
         @endfor
     </table>

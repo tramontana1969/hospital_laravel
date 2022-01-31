@@ -50,4 +50,8 @@ class PatientController extends Controller
         }
         return redirect()->refresh();
     }
+    public function delete(Request $request, $id) {
+        Patient::find($id)->delete();
+        return redirect('patients');
+    }
 }

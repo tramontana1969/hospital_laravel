@@ -24,14 +24,20 @@
                 <th>sex</th>
                 <th>date_of_birth</th>
                 <th>home_address</th>
+                <th>delete</th>
             </tr>
                 @for ($i = 0; $i < count($patients); $i++)
                     <tr>
-                    <td><a href="/patients/id={{$patients[$i]['id']}}">{{ $patients[$i]['id'] }}</a></td>
+                    <td><a href="/patients/id={{ $patients[$i]['id'] }}">{{ $patients[$i]['id'] }}</a></td>
                     <td>{{ $patients[$i]['name'] }}</td>
                     <td>{{ $patients[$i]['sex'] }}</td>
                     <td>{{ $patients[$i]['date_of_birth'] }}</td>
                     <td>{{ $patients[$i]['home_address'] }}</td>
+                    <td>
+                        <a href="/patients/delete/id={{ $patients[$i]['id'] }}">
+                            <button>Delete</button>
+                        </a>
+                    </td>
                 @endfor
             </tr>
         </table>

@@ -29,3 +29,4 @@ Route::post('/medicine/id={id}', [\App\Http\Controllers\Models\MedicineControlle
 Route::get('/examine', [\App\Http\Controllers\Models\ExamineController::class, 'showAll']);
 Route::post('/examine', [\App\Http\Controllers\Models\ExamineController::class, 'add']);
 Route::get('/examine/id={id}', [\App\Http\Controllers\Models\ExamineController::class, 'oneExam']);
+Route::post('/examine/id={id}', [\App\Http\Controllers\Models\ExamineController::class, 'edit']);

@@ -26,7 +26,7 @@
         </tr>
         @for($i = 0; $i < count($meds); $i++)
             <tr>
-                <td><a href="medicine/id={{ $meds[$i]['id'] }}">{{ $meds[$i]['id'] }}</a></td>
+                <td><a href="/medicine/id={{ $meds[$i]['id'] }}">{{ $meds[$i]['id'] }}</a></td>
                 <td>{{ $meds[$i]['name'] }}</td>
                 <td>{{ $meds[$i]['description'] }}</td>
                 <td>{{ $meds[$i]['side_effect'] }}</td>

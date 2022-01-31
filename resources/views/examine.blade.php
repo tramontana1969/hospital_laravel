@@ -30,7 +30,7 @@
         </tr>
         @for($i = 0; $i < count($examine); $i++)
             <tr>
-                <td><a href="examine/id={{ $examine[$i]['id'] }}">{{ $examine[$i]['id'] }}</a></td>
+                <td><a href="/examine/id={{ $examine[$i]['id'] }}">{{ $examine[$i]['id'] }}</a></td>
                 <td>{{ $examine[$i]['diagnosis'] }}</td>
                 <td><a href="/patients/id={{ $examine[$i]['patient_id'] }}">{{ $examine[$i]['patient_id'] }}</a></td>
                 <td>{{ $examine[$i]['date'] }}</td>

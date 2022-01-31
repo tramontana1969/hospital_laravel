@@ -27,7 +27,7 @@
             </tr>
                 @for ($i = 0; $i < count($patients); $i++)
                     <tr>
-                    <td><a href="patients/id={{$patients[$i]['id']}}">{{ $patients[$i]['id'] }}</a></td>
+                    <td><a href="/patients/id={{$patients[$i]['id']}}">{{ $patients[$i]['id'] }}</a></td>
                     <td>{{ $patients[$i]['name'] }}</td>
                     <td>{{ $patients[$i]['sex'] }}</td>
                     <td>{{ $patients[$i]['date_of_birth'] }}</td>

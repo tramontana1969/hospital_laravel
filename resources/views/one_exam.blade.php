@@ -43,5 +43,24 @@
             <td>{{ $exam['doctors_name'] }}</td>
         </tr>
     </table>
+    <form method="post">
+        @csrf
+        <input type="hidden" name="id" value="id"/>
+        <p>diagnosis: <input type="text" name="diagnosis" value="{{ $exam['diagnosis'] }}"/></p>
+        <p>patient
+            <select name="patient_id">
+                <option selected value="{{ $one_patient['id'] }}">{{ $one_patient['name'] }}</option>
+                @foreach($patients as $other)
+                    <option value="{{ $other->id }}">{{ $other->name }}</option>
+                @endforeach
+            </select>
+        </p>
+        <p>date: <input type="date" name="date" value="{{ $exam['date'] }}"/></p>
+        <p>place: <input type="text" name="place" value="{{ $exam['place'] }}"/></p>
+        <p>symptoms: <input type="text" name="symptoms" value="{{ $exam['symptoms'] }}"/></p>
+        <p>medical_prescription: <input type="text" name="medical_prescription" value="{{ $exam['medical_prescription'] }}"/></p>
+        <p>doctors_name: <input type="text" name="doctors_name" value="{{ $exam['doctors_name'] }}"/></p>
+        <input type="submit" value="Edit Examine"/>
+    </form>
     </body>
 </html>

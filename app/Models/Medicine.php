@@ -13,4 +13,7 @@ class Medicine extends Model
         'description',
         'side_effect',
     ];
+    public function examine() {
+        return $this->belongsToMany(Examine::class);
+    }
 }

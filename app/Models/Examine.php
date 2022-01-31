@@ -20,4 +20,7 @@ class Examine extends Model
      public function patient() {
          return $this -> belongsTo('App\Models\Patient');
      }
+    public function medicine() {
+        return $this->belongsToMany(Medicine::class);
+    }
 }
